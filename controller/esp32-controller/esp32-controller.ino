@@ -119,8 +119,6 @@ void initializeRadioSPITransceiver()
     delay(1000);
   }
 
-  radioTransceiver.enableDynamicPayloads();
-  radioTransceiver.setCRCLength(RF24_CRC_16);
   radioTransceiver.setChannel(111);
   radioTransceiver.setPALevel(RF24_PA_MIN);
   radioTransceiver.setDataRate(RF24_250KBPS);
@@ -144,8 +142,6 @@ bool reinitializeRadioSPITransceiver()
     return false;
   }
 
-  radioTransceiver.enableDynamicPayloads();
-  radioTransceiver.setCRCLength(RF24_CRC_16);
   radioTransceiver.setChannel(111);
   radioTransceiver.setPALevel(RF24_PA_MIN);
   radioTransceiver.setDataRate(RF24_250KBPS);
