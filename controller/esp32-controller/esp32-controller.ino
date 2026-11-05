@@ -1,16 +1,22 @@
 /* Libraries
   - RF24 by TMRh20 1.6.0
   - PCF8575 by Rob Tillaart 0.3.0
+  - Adafruit SSD1306 2.5.17
 */
 #include <Wire.h>
 #include <SPI.h>
 #include <PCF8575.h> 
 #include <RF24.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
 
 // Constant values
 constexpr uint16_t PRINT_BUFFER_SIZE = 2000;
 constexpr uint8_t DATA_PAYLOAD_MAX_SIZE = 32;
 constexpr uint8_t BT_DATA_MAX_SIZE = 8;
+constexpr uint8_t SCREEN_WIDTH = 128;
+constexpr uint8_t SCREEN_HEIGHT = 64;
+constexpr uint8_t SSD1306_RESET = -1;
 
 // GPIO Pins
 constexpr uint8_t LED_PIN = 2;
@@ -34,6 +40,10 @@ constexpr uint8_t BUT1_PIN = 1;
 constexpr uint8_t BUT2_PIN = 2;
 constexpr uint8_t BUT3_PIN = 3;
 
+// SSD1306 PINS
+constexpr uint8_t SSD1306_SDA_PIN = 26;
+constexpr uint8_t SSD1306_SCL_PIN = 27;
+
 // General Variables
 char printBuffer[PRINT_BUFFER_SIZE];
 TwoWire pcf8575Wire(0);
@@ -48,6 +58,13 @@ uint8_t radioSendBuffer[DATA_PAYLOAD_MAX_SIZE];
 char btReceiveBuffer[BT_DATA_MAX_SIZE];
 char btSendBuffer[BT_DATA_MAX_SIZE];
 uint8_t btReceiveIndex = 0;
+TwoWire SSD1306Wire(1);
+Adafruit_SSD1306 display(
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+  &SSD1306Wire,
+  SSD1306_RESET
+);
 
 void setup() 
 {
@@ -60,6 +77,7 @@ void setup()
   initializeBluetooth();
   initializePCF8575();
   initializeRadioSPITransceiver();
+  initializeSSD1306();
   digitalWrite(LED_PIN, HIGH);
   Serial1.println("Hello from ESP32");
 
@@ -159,6 +177,31 @@ bool reinitializeRadioSPITransceiver()
   printToSerial("NRF24l01 module reinitialized successfully.\n");
   
   return true;
+}
+
+void initializeSSD1306()
+{
+    SSD1306Wire.begin(SSD1306_SDA_PIN, SSD1306_SCL_PIN, 400000);
+    while (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
+    {
+        printToSerial("SSD1306 initialization failed! Retrying...\n");
+        delay(1000);
+    }
+    display.clearDisplay();
+    display.setTextColor(SSD1306_WHITE);
+    display.setTextSize(1);
+    display.setTextWrap(true);
+
+    display.setCursor(0, 0);
+    display.println("ESP32 INITIALIZED");
+    display.println("----------------");
+    display.println("OLED: OK");
+    display.println("I2C BUS: 1");
+    display.println("RESOLUTION: 128x64");
+
+    display.display();
+
+    printToSerial("SSD1306 initialized successfully!\n");
 }
 
 bool radioReceive()
