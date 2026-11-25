@@ -2545,6 +2545,16 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 129.54) (xy 214.63 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccf99c22-d7f8-4710-af53-060b39d8768b")
+	)
+	(wire
+		(pts
 			(xy 91.44 80.01) (xy 102.87 80.01)
 		)
 		(stroke
@@ -2605,7 +2615,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 129.54) (xy 210.82 129.54)
+			(xy 200.66 129.54) (xy 214.63 129.54)
 		)
 		(stroke
 			(width 0)
@@ -2743,7 +2753,7 @@
 		)
 		(uuid "2a3f6d98-031f-4167-8023-fbffd9126e9e")
 	)
-	(label "VCC"
+	(label "VCC_5V"
 		(at 210.82 129.54 180)
 		(effects
 			(font
@@ -2793,7 +2803,7 @@
 		)
 		(uuid "352aa5e4-e0eb-4255-b1d1-4cf3d2e5c172")
 	)
-	(label "VCC"
+	(label "VCC_3.3V"
 		(at 214.63 78.74 90)
 		(effects
 			(font
@@ -3783,6 +3793,83 @@
 			(project "controller_design"
 				(path "/872ab41b-2e8a-4c92-9fe1-9deb0d3a6c17"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 214.63 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c26c2b6-11cc-4e06-bc8f-302f4c8b9c88")
+		(property "Reference" "#PWR011"
+			(at 214.63 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 214.63 123.952 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 214.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 214.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 214.63 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "41501edc-0d45-4aa1-bdc1-e5d6ae704d32")
+		)
+		(instances
+			(project "controller_design"
+				(path "/872ab41b-2e8a-4c92-9fe1-9deb0d3a6c17"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
