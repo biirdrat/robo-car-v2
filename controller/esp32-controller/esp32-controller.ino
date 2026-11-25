@@ -22,15 +22,15 @@ constexpr uint8_t SSD1306_RESET = -1;
 constexpr uint8_t LED_PIN = 2;
 
 // BLUETOOTH PINS
-constexpr uint8_t BT_RX_PIN  = 36;
-constexpr uint8_t BT_TX_PIN  = 25;
+constexpr uint8_t UART_BT_RX_PIN  = 36;
+constexpr uint8_t UART_BT_TX_PIN  = 25;
 
 // NRF24 PINS
 constexpr uint8_t VSPI_SCK_PIN  = 18;
 constexpr uint8_t VSPI_MISO_PIN = 19;
 constexpr uint8_t VSPI_MOSI_PIN = 23;
-constexpr uint8_t CE_PIN  = 4;
-constexpr uint8_t CSN_PIN = 5;
+constexpr uint8_t VSPI_CE_PIN  = 4;
+constexpr uint8_t VSPI_CSN_PIN = 5;
 
 // PCF8575 PINS
 constexpr uint8_t PCF8575_SDA_PIN = 32;
@@ -50,7 +50,7 @@ TwoWire pcf8575Wire(0);
 PCF8575 pcf8575(0x20, &pcf8575Wire);
 constexpr byte radioAddress[6] = "RADIO";
 SPIClass vspi(VSPI);
-RF24 radioTransceiver(CE_PIN, CSN_PIN, 1000000);
+RF24 radioTransceiver(VSPI_CE_PIN, VSPI_CSN_PIN, 1000000);
 bool spiOk = false;
 bool commsOk = false;
 uint8_t radioReceiveBuffer[DATA_PAYLOAD_MAX_SIZE];
@@ -100,7 +100,7 @@ void initializeGPIOPins()
 void initializeBluetooth()
 {
   // Initialize UART1
-  Serial1.begin(9600, SERIAL_8N1, BT_RX_PIN, BT_TX_PIN);
+  Serial1.begin(9600, SERIAL_8N1, UART_BT_RX_PIN, UART_BT_TX_PIN);
 
   Serial.println("UART1 Started");
 }
@@ -129,7 +129,7 @@ void initializePCF8575()
 
 void initializeRadioSPITransceiver()
 {
-  vspi.begin(VSPI_SCK_PIN, VSPI_MISO_PIN, VSPI_MOSI_PIN, CSN_PIN);
+  vspi.begin(VSPI_SCK_PIN, VSPI_MISO_PIN, VSPI_MOSI_PIN, VSPI_CSN_PIN);
 
   while(!radioTransceiver.begin(&vspi)) 
   {
