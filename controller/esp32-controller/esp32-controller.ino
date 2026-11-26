@@ -21,26 +21,31 @@ constexpr uint8_t SSD1306_RESET = -1;
 // GPIO Pins
 constexpr uint8_t LED_PIN = 2;
 
-// BLUETOOTH PINS
-constexpr uint8_t UART_BT_RX_PIN  = 36;
+// Joystick Pins
+constexpr uint8_t JOYSTICK_X_PIN  = 39;
+constexpr uint8_t JOYSTICK_Y_PIN  = 36;
+
+// HC05 Bluetooth Pins
+constexpr uint8_t UART_BT_RX_PIN  = 35;
 constexpr uint8_t UART_BT_TX_PIN  = 25;
 
-// NRF24 PINS
+// NRF24 Pins
 constexpr uint8_t VSPI_SCK_PIN  = 18;
 constexpr uint8_t VSPI_MISO_PIN = 19;
 constexpr uint8_t VSPI_MOSI_PIN = 23;
 constexpr uint8_t VSPI_CE_PIN  = 4;
 constexpr uint8_t VSPI_CSN_PIN = 5;
 
-// PCF8575 PINS
+// PCF8575 Pins
 constexpr uint8_t PCF8575_SDA_PIN = 32;
 constexpr uint8_t PCF8575_SCL_PIN = 33;
 constexpr uint8_t BUT0_PIN = 0;
 constexpr uint8_t BUT1_PIN = 1;
 constexpr uint8_t BUT2_PIN = 2;
 constexpr uint8_t BUT3_PIN = 3;
+constexpr uint8_t JOYSTICK_BUTTON_PIN  = 4;
 
-// SSD1306 PINS
+// SSD1306 Pins
 constexpr uint8_t SSD1306_SDA_PIN = 26;
 constexpr uint8_t SSD1306_SCL_PIN = 27;
 
