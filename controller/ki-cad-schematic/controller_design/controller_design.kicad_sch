@@ -3051,6 +3051,26 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 58.42) (xy 182.88 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "662af137-03c7-4bf2-9f7c-e15dadf1ea7c")
+	)
+	(wire
+		(pts
+			(xy 190.5 58.42) (xy 190.5 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69627cfc-5798-4750-a7a1-1c0143a22cda")
+	)
+	(wire
+		(pts
 			(xy 91.44 127) (xy 106.68 127)
 		)
 		(stroke
@@ -3218,6 +3238,16 @@
 			(type default)
 		)
 		(uuid "8fe73589-5bb9-49d7-bce9-fce284cfe1a9")
+	)
+	(wire
+		(pts
+			(xy 187.96 58.42) (xy 187.96 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "911dd856-65e8-4cf8-8af3-977d71626660")
 	)
 	(wire
 		(pts
@@ -3461,6 +3491,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 58.42) (xy 185.42 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8b32f90-d13e-4624-806b-9bcf8575154a")
+	)
+	(wire
+		(pts
 			(xy 148.59 111.76) (xy 162.56 111.76)
 		)
 		(stroke
@@ -3699,6 +3739,16 @@
 		)
 		(uuid "3d0d66aa-ca15-4eaf-b70d-6365dad41346")
 	)
+	(label "SCL1"
+		(at 187.96 58.42 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3f18d7b6-63ab-4f2b-a0e6-c3047ea37721")
+	)
 	(label "VDD"
 		(at 265.43 118.11 180)
 		(effects
@@ -3819,6 +3869,16 @@
 		)
 		(uuid "5fd2a3e3-a77a-4a87-91b4-357e0fc2754c")
 	)
+	(label "VCC_3.3V"
+		(at 185.42 58.42 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "622fb24d-e95a-4ca1-9b17-e4b68895c8b5")
+	)
 	(label "GND"
 		(at 114.3 64.77 0)
 		(effects
@@ -3828,6 +3888,16 @@
 			(justify left bottom)
 		)
 		(uuid "64fb3c9c-5c4d-4866-b2bc-6af0ebbef141")
+	)
+	(label "GND"
+		(at 182.88 58.42 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "66a41e13-3d09-4ec9-8259-1e48de9d2035")
 	)
 	(label "VSPI_CE"
 		(at 66.04 90.17 90)
@@ -4018,6 +4088,16 @@
 			(justify right bottom)
 		)
 		(uuid "a482b369-2b07-452c-b6b2-0895098fd978")
+	)
+	(label "SDA1"
+		(at 190.5 58.42 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a6b7bc68-abe0-497f-9746-c49a31faee56")
 	)
 	(label "GND"
 		(at 91.44 104.14 0)
@@ -6062,7 +6142,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 218.44 64.77 90)
+		(at 185.42 74.93 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6073,7 +6154,7 @@
 		(fields_autoplaced yes)
 		(uuid "92f171d5-d319-45f6-94f7-751a670d2c64")
 		(property "Reference" "J9"
-			(at 219.71 58.42 90)
+			(at 186.69 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6083,7 +6164,7 @@
 			)
 		)
 		(property "Value" "OLED"
-			(at 219.71 60.96 90)
+			(at 186.69 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6093,7 +6174,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 218.44 64.77 0)
+			(at 185.42 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6104,7 +6185,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 218.44 64.77 0)
+			(at 185.42 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6115,7 +6196,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 218.44 64.77 0)
+			(at 185.42 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
