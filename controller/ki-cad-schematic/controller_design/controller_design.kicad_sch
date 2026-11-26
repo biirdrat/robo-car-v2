@@ -2835,6 +2835,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 162.56) (xy 196.85 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5db75fc5-6b47-4123-a373-7275f77adc48")
+	)
+	(wire
+		(pts
 			(xy 241.3 59.69) (xy 251.46 59.69)
 		)
 		(stroke
@@ -3125,16 +3135,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 162.56) (xy 196.85 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b76bab06-a215-49c3-ae47-7f6df1b74a5a")
-	)
-	(wire
-		(pts
 			(xy 93.98 101.6) (xy 106.68 101.6)
 		)
 		(stroke
@@ -3315,7 +3315,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 120.65) (xy 220.98 120.65)
+			(xy 218.44 120.65) (xy 222.25 120.65)
 		)
 		(stroke
 			(width 0)
@@ -4603,97 +4603,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
-		(at 289.56 118.11 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "27164881-6523-45fe-b36e-be4a7cd9c81c")
-		(property "Reference" "J9"
-			(at 292.1 116.8399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x05"
-			(at 292.1 119.3799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 289.56 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 289.56 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 289.56 118.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8fb39c05-1695-4b05-bd0d-3b2f83de4929")
-		)
-		(pin "1"
-			(uuid "b1e4731e-2ea8-4c0a-8bef-b4a5d8649bd5")
-		)
-		(pin "3"
-			(uuid "61727887-bac7-40fb-a137-671499c60614")
-		)
-		(pin "5"
-			(uuid "7d23a114-65ad-4280-9d68-76bf0f058487")
-		)
-		(pin "4"
-			(uuid "434c8cfb-8837-420b-9430-1a8c7966315c")
-		)
-		(instances
-			(project "controller_design"
-				(path "/872ab41b-2e8a-4c92-9fe1-9deb0d3a6c17"
-					(reference "J9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
 		(at 243.84 144.78 0)
 		(mirror x)
@@ -4787,7 +4696,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 220.98 120.65 0)
+		(at 222.25 120.65 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4797,7 +4706,7 @@
 		(dnp no)
 		(uuid "364be0f8-8e1e-4ef3-a667-294250bcd3a0")
 		(property "Reference" "#PWR010"
-			(at 220.98 124.46 0)
+			(at 222.25 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4807,8 +4716,8 @@
 				)
 			)
 		)
-		(property "Value" "+3V"
-			(at 220.98 116.332 0)
+		(property "Value" "+3.3V"
+			(at 222.25 116.332 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4818,7 +4727,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 120.65 0)
+			(at 222.25 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4829,7 +4738,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 120.65 0)
+			(at 222.25 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4840,7 +4749,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 220.98 120.65 0)
+			(at 222.25 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5323,7 +5232,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V"
+		(property "Value" "+3.3V"
 			(at 93.98 96.012 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5853,6 +5762,83 @@
 			(project "controller_design"
 				(path "/872ab41b-2e8a-4c92-9fe1-9deb0d3a6c17"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 179.07 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8b534199-5994-49db-9242-74aed5b72301")
+		(property "Reference" "#PWR019"
+			(at 179.07 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 179.07 158.242 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 179.07 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "040222f1-cc0b-4549-9240-c36d2c1a4aff")
+		)
+		(instances
+			(project "controller_design"
+				(path "/872ab41b-2e8a-4c92-9fe1-9deb0d3a6c17"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
