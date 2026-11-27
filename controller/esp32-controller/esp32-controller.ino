@@ -39,11 +39,11 @@ constexpr uint8_t VSPI_CSN_PIN = 5;
 // PCF8575 Pins
 constexpr uint8_t PCF8575_SDA_PIN = 32;
 constexpr uint8_t PCF8575_SCL_PIN = 33;
-constexpr uint8_t BUT0_PIN = 0;
-constexpr uint8_t BUT1_PIN = 1;
-constexpr uint8_t BUT2_PIN = 2;
-constexpr uint8_t BUT3_PIN = 3;
-constexpr uint8_t JOYSTICK_BUTTON_PIN  = 4;
+constexpr uint8_t BUT0_PIN = 8;
+constexpr uint8_t BUT1_PIN = 9;
+constexpr uint8_t BUT2_PIN = 10;
+constexpr uint8_t BUT3_PIN = 11;
+constexpr uint8_t JOYSTICK_BUTTON_PIN  = 15;
 
 // SSD1306 Pins
 constexpr uint8_t SSD1306_SDA_PIN = 26;

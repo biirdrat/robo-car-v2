@@ -4019,7 +4019,7 @@
 		)
 		(uuid "8cfcea94-2234-4326-91ce-da02ce3df563")
 	)
-	(label "VSPI_CSN"
+	(label "VSPI_CE"
 		(at 91.44 111.76 0)
 		(effects
 			(font
@@ -4279,7 +4279,7 @@
 		)
 		(uuid "e07026a5-abb2-4ab6-b741-aa6e557ff3ba")
 	)
-	(label "VSPI_CE"
+	(label "VSPI_CSN"
 		(at 91.44 119.38 0)
 		(effects
 			(font
